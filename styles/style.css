@@ -2,4 +2,73 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  
+}
+
+.header {
+  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 20px;
+  
+  
+
+
+}
+
+.header__first-line {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: relative;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  
+  gap: 10px;
+  flex-basis: 50%;
+}
+
+.header__pseudo-cam {
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  left: 95%;
+}
+
+.header__pseudo-cam::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0070;
+
+}
+
+.header__tittle {
+  color: #db00ff;
+  font-size: 157px;
+  line-height: 82,5%;
+  text-shadow: 4px 4px 0px #ff0070;
+  font-family: "IBM Plex Mono" ;
+}
+
+.header__text {
+  background-color: #FF0070;
+  color: #0d0d0d;
+  width: 491px;
+  height: 71px;
+  justify-self: end;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "IBM Plex Mono";
 }
