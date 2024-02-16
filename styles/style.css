@@ -12,63 +12,122 @@
 
 .header {
   height: 100vh;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: 20px;
-  
-  
-
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 668px;;
 
 }
 
 .header__first-line {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  position: relative;
+  
+}
+
+.header__theme-menu {
+ justify-self: end;
+ 
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: row;
-  
-  gap: 10px;
-  flex-basis: 50%;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 11px;
+  padding-right: 2px;
+ }
+
+ .header__theme-menu-button {
+  border: 1px solid transparent;
+  color: #ff0070;
+  line-height: 18px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 18px;
+  background: transparent;
+  text-transform: lowercase;
 }
+
 
 .header__pseudo-cam {
   text-transform: uppercase;
   color: #fff;
   position: absolute;
-  left: 95%;
+  left: 82%;
+  top: 1.7%;
+  color: #FF0070;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  letter-spacing: 1px;
+
 }
+
+
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-bottom: 1px solid #ff0070;;
+  border-left: 1px solid #ff0070;
+  bottom: 10px;
+  left: 10px;
+ }
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: 1px solid #ff0070;;
+  border-right: 1px solid #ff0070;;
+  top: 10px;
+  right: 10px;
+  }
 
 .header__pseudo-cam::after {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #ff0070;
-
+  
 }
 
 .header__tittle {
   color: #db00ff;
-  font-size: 157px;
-  line-height: 82,5%;
-  text-shadow: 4px 4px 0px #ff0070;
-  font-family: "IBM Plex Mono" ;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+  font-family: IBM Plex Mono, sans-serif;
+  
 }
 
 .header__text {
   background-color: #FF0070;
   color: #0d0d0d;
-  width: 491px;
-  height: 71px;
   justify-self: end;
   font-size: 18px;
   font-weight: 700;
   font-family: "IBM Plex Mono";
+  margin-top: 5px;
+}
+
+.main {
+  padding-top: 10px;;
+}
+
+.article__tittle {
+  color: #FF0070;
+
 }
