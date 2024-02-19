@@ -22,9 +22,7 @@
 
 }
 
-.header__first-line {
-  
-}
+
 
 .header__theme-menu {
  justify-self: end;
@@ -35,20 +33,26 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-bottom: 11px;
-  padding-right: 2px;
+  padding-bottom: 13px;
+  padding-right: 11px;
  }
 
  .header__theme-menu-button {
   border: 1px solid transparent;
   color: #ff0070;
-  line-height: 18px;
   font-family: "IBM Plex Mono", Arial, sans-serif;
   font-weight: 400;
   line-height: 18px;
   font-size: 18px;
   background: transparent;
   text-transform: lowercase;
+  inline-size: 60px;
+  cursor: pointer;
+  padding: 1px 10px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid #ff0070;
 }
 
 
@@ -63,7 +67,8 @@
   line-height: 25px;
   font-weight: 400;
   font-family: "IBM Plex Mono", Arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-align: center;
 
 }
 
@@ -103,31 +108,194 @@
   
 }
 
-.header__tittle {
+.header__title {
   color: #db00ff;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+  text-shadow: 4px 4px 0  #ff0070;
   font-family: IBM Plex Mono, sans-serif;
+  padding-left: 5px;
   
 }
 
 .header__text {
   background-color: #FF0070;
   color: #0d0d0d;
-  justify-self: end;
   font-size: 18px;
   font-weight: 700;
-  font-family: "IBM Plex Mono";
-  margin-top: 5px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  line-height: 23.4px;
+  width: clamp(355px, 364px, 491px);
+  padding-left: 5px;
+  margin-block-start: 7px;
 }
 
-.main {
-  padding-top: 10px;;
+.section {
+  padding-block-start: 50px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.article__tittle {
+.div__class {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section:first-child {
+  padding-block-start: 40px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article__title {
   color: #FF0070;
+  font-size: 18px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: #000028;
+  background-color: #ff0070;
+}
+
+.card__text {
+  font-size: 18px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: #F1B2CE;
+
+}
+
+.card__title-no-akcent {
+  font-size: 18px;
+  font-family: "IBM Plex Mono", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: #000028;
+  background-color: #ff0070;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 1px 2px 0 #ff0070;
+
+}
+
+.section__pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  
+}
+
+.footer {
+  margin-block-start: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.footer__title {
+  color: #db00ff;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0  #ff0070;
+  font-family: "IBM Plex Mono", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (width >= 768px ) {
+  .header {
+    padding: 0px;
+    max-height: 1024px;
+    justify-content: normal;
+  }
+
+  .header__text {
+    padding-left: 0px;
+    margin-block-start: -20px;
+    margin-inline-end: 20px;
+    justify-self: end;
+  }
+
+  .header__title {
+    padding-left: 0px;
+  }
+
+  .header__theme-menu {
+    padding-inline-end: 16px;
+    padding-block-start: 30px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .header__pseudo-cam {
+    right: -25px;
+    top: 20px;
+  }
+
+  .section:first-child {
+    padding-block-start: 60px;
+  }
+
+  .section__hard {
+    display: grid;
+    grid-template-columns: 236px auto;
+    padding-inline-start: 20px;
+  }
+
+  .card__title {
+    width: 100%;
+  }
+
+  .card__text {
+    width: 100%;
+  }
+
+  .card__text-fill {
+    width: 472px;
+  }
+  
+
+  .section__fill {
+    block-size: 728px ;
+    
+  }
 
 }
