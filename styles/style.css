@@ -18,7 +18,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  max-height: 668px;;
+  min-height: 668px;
+  height: 100vh;
 }
 
 .header__theme-menu {
@@ -53,11 +54,11 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid currentColor;
+  border: 1px solid var(--button-hover-color, rgba(50, 49, 45, 0.4));
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid currentColor;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -204,7 +205,7 @@
 }
 
 .link:focus {
-  outline: 1px solid currentColor;
+  outline: none;
 }
 
 .link:focus-visible{
@@ -232,7 +233,8 @@ margin-block-start: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 668px;
+  height: 100vh;
   position: relative;
 }
 

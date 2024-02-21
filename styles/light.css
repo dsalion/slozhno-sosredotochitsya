@@ -18,6 +18,7 @@
   --decor-color: #353430;
   --card-title-color: #353430;
   --shadow-color: #FF8DCB;
+  --button-hover-color: rgba(50, 49, 45, 0.4);
 }
 
 .page.theme_light .header__pseudo-cam {
@@ -25,8 +26,8 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    .page.theme_light {
+   :root { 
+    
       /* сохраните этот селектор в приведённом виде.
         Так стили написанные ниже будут иметь больший вес,
         чем стили в медиазапросе предпочтений пользователя
@@ -40,10 +41,14 @@
       --decor-color: #353430;
       --card-title-color: #353430;
       --shadow-color: #FF8DCB;
+      --button-hover-color: rgba(50, 49, 45, 0.4);
     }
     
     .page.theme_light .header__pseudo-cam {
       display: none;
     }
-  }
-}
+
+    .page.theme_auto .header__pseudo-cam {
+      display: none;
+    }
+   } 
